@@ -3,13 +3,19 @@
 .nav {
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-areas: 'logo links busca icones';
-  height: 100px;
-  padding: 0 120px;
-  position: absolute;
+  grid-template-columns: 2fr minmax(400px, 2fr) 1fr;
+  grid-template-rows: 2fr 0.75fr;
+  grid-template-areas: 
+  'logo busca icones'
+  'links links links';
+
+  height: 170px;
   width: 100vw;
+  justify-content: center;
   z-index: 1;
+
+  background-color:#f8ad14;
+
   @media(max-width: $tablet) {
     grid-template-areas:
       'logo logo'
@@ -28,10 +34,22 @@
 .logo {
   cursor: pointer;
   grid-area: logo;
+  margin-inline: auto;
+  padding-inline-start: 2rem;
+  width: 15rem;
+  border-radius: 24px;
 }
 
 .links {
   grid-area: links;
+  background-color: #000;
+
+  padding-inline: 2rem;
+
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 40px;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
@@ -43,6 +61,14 @@
 .link {
   color: white;
   font-size: 22px;
+}
+
+.links a{
+  text-decoration: none;
+}
+
+.link:hover{
+  color: #f8ad14;
 }
 
 .busca {

@@ -4,11 +4,8 @@ import styles from './Home.module.scss';
 export default function Home() {
   return (
     <div>
-      <Header
-        title="Geek Journey"
-        description="Transforme Sua Paixão em Coleções Reais"
-        className={styles.header}
-      />
+      <Header className={styles.header} />
+      <main>TEstando aqui</main>
     </div>
   );
 }
