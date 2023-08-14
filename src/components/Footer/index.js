@@ -9,12 +9,20 @@ const iconeProps = {
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div>
-        <FaFacebook {...iconeProps} />
-        <FaTwitter {...iconeProps} />
-        <FaInstagram {...iconeProps} />
+      <div className={styles.container}>
+        <span>© Desenvolvido por Victor Hugo com apoio da Alura.</span>
+        <div className={styles.iconsContainer}>
+          <span>
+            <FaFacebook {...iconeProps} />
+          </span>
+          <span>
+            <FaInstagram {...iconeProps} />
+          </span>
+          <span>
+            <FaTwitter {...iconeProps} />
+          </span>
+        </div>
       </div>
-      <span>Desenvolvido por Victor Hugo com apoio da Alura.</span>
     </footer>
   );
 }
