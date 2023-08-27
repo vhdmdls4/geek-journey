@@ -11,8 +11,30 @@
 
   @media(max-width: $tablet){
     border-radius: 0;
+    height: 100%;
+    padding: 12px 2rem;
+  }
+
+  @media(max-width: $mobile-sm){
+    border-radius: 0;
+    height: 100%;
+    padding: 8px 2rem;
+  }
+
+  .buscaIcon{
+  cursor: pointer;
+    border-left: 1px solid #ccc;
+    padding: 0rem 1rem 0rem 2rem;
+    @media(max-width:$tablet){
+      padding: .5rem .25rem .5rem 2rem;
+    }
+    @media(max-width:$mobile-sm){
+      padding: .25rem 0rem .25rem 2rem;
+    }
   }
 }
+
+
 
 .input {
   outline: none;

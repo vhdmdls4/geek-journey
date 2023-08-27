@@ -20,7 +20,7 @@
       'hamburguer logo logo icones'
       'busca busca busca busca';
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr .25fr;
     height: 200px;
     justify-items: center;
   }
@@ -30,7 +30,7 @@
     'hamburguer logo icones'
     'busca busca busca';
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr .5fr;
   }
 }
 
@@ -170,6 +170,9 @@
   display: flex;
   grid-area: busca;
   width: 100%;
+  @media(max-width:$tablet){
+    height: 100%;
+  }
 }
 
 .selected {
