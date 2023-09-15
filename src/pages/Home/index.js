@@ -1,9 +1,13 @@
 import Header from 'components/Header';
 import styles from './Home.module.scss';
 import { useNavigate } from 'react-router-dom';
+import categories from 'data/constants';
+import { useSelector } from 'react-redux';
 
 export default function Home() {
   const navigate = useNavigate();
+  const categories = useSelector((state) => state.categories);
+  console.log(categories);
 
   return (
     <div>
@@ -14,15 +18,21 @@ export default function Home() {
             <h1>Categorias</h1>
           </div>
           <div className={styles['categories-container']}>
-            {categories.map((category, index) => {
+            {console.log(categories[0].thumbnail)}
+            {categories.map((category, index) => (
               <div
                 key={index}
                 onClick={() => navigate(`/categoria/${category.id}`)}
               >
-                <img src={category.thumbnail} alt={category.name} />
+                {console.log(index)}
+                <img
+                  src={category.thumbnail}
+                  alt={category.name}
+                  className={styles['categories-thumbnail']}
+                />
                 <h1>{category.name}</h1>
-              </div>;
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </main>

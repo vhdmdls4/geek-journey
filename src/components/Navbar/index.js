@@ -60,7 +60,7 @@ export default function Navbar() {
               [styles.selected]: window.location.pathname === '/',
             })}
           >
-            Página inicial
+            PÁGINA INICIAL
           </a>
         </li>
         <li>
@@ -70,7 +70,7 @@ export default function Navbar() {
               [styles.selected]: window.location.pathname === '/',
             })}
           >
-            Produtos
+            PRODUTOS
           </a>
         </li>
         <li>
@@ -80,7 +80,7 @@ export default function Navbar() {
               [styles.selected]: window.location.pathname === '/',
             })}
           >
-            Sobre
+            SOBRE
           </a>
         </li>
       </ul>
