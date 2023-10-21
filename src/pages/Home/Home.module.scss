@@ -1,5 +1,5 @@
 .header {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .categories {
@@ -32,9 +32,9 @@
       }
     }
   }
-  &-thumbnail{
-  width: 200px;
-  height: 300px; 
-  object-fit: cover;
+  &-thumbnail {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
   }
 }

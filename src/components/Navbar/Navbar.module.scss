@@ -4,32 +4,32 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr minmax(500px, 3fr) 1fr;
-  grid-template-rows: 2fr 1fr;
-  grid-template-areas: 
-  'logo busca icones'
-  'links links links';
+  grid-template-rows: 2fr 1.25fr;
+  grid-template-areas:
+    'logo busca icones'
+    'links links links';
   width: 100vw;
   justify-content: center;
   z-index: 1;
 
-  background-color:#f8ad14;
+  background-color: #0b0218;
 
-  @media(max-width: $tablet) {
+  @media (max-width: $tablet) {
     grid-template-areas:
       'hamburguer logo logo icones'
       'busca busca busca busca';
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr .25fr;
+    grid-template-rows: 1fr 0.25fr;
     justify-items: center;
   }
-  @media(max-width: $mobile-sm) {
+  @media (max-width: $mobile-sm) {
     width: 100%;
     grid-template-areas:
-    'hamburguer logo icones'
-    'busca busca busca';
+      'hamburguer logo icones'
+      'busca busca busca';
     height: 100px;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: .75fr .25fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.75fr 0.25fr;
   }
 }
 
@@ -48,11 +48,10 @@
 }
 
 .links {
-
   list-style-type: none;
 
   grid-area: links;
-  background-color: #000;
+  background-color: #6a1b9a;
 
   padding-inline: 3rem;
 
@@ -62,7 +61,10 @@
   display: flex;
   justify-content: flex-start;
   gap: 25px;
-  @media(max-width: $tablet) {
+
+  margin-bottom: 0;
+
+  @media (max-width: $tablet) {
     justify-self: start;
     position: fixed;
     top: 0;
@@ -70,18 +72,18 @@
   }
 }
 
-.hamburguer{
+.hamburguer {
   grid-area: hamburguer;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 2.5rem;
   cursor: pointer;
   margin-bottom: 4px;
-  @media(max-width: $mobile-sm) {
+  @media (max-width: $mobile-sm) {
     font-size: 1.75rem;
   }
 }
 
-.hamburguer:active{
+.hamburguer:active {
   background-color: #c6c6c675;
 }
 
@@ -101,26 +103,26 @@
 
   background-color: #111;
   overflow-x: hidden;
-  transition: .5s;
+  transition: 0.5s;
 
   padding: 0;
-  gap:0;
+  gap: 0;
   padding-top: 5rem;
 }
 
-.sidenav li{
-  width:100%;
-  border-bottom: .25px dotted #f2f2f2;
+.sidenav li {
+  width: 100%;
+  border-bottom: 0.25px dotted #f2f2f2;
 }
 
-.active{
-  @media(max-width: $tablet) {
-    left:0;
+.active {
+  @media (max-width: $tablet) {
+    left: 0;
   }
 }
 
 .sidenav li a {
-  background-color: #f8ad14;
+  background-color: #6a1b9a;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 18px;
@@ -129,7 +131,7 @@
   transition: 0.3s;
   width: 100%;
 
-  @media(max-width: $mobile-sm) {
+  @media (max-width: $mobile-sm) {
     padding-left: 12px;
   }
 }
@@ -148,13 +150,17 @@
   cursor: pointer;
 }
 
-.sidenav .closebtn:active{
+.sidenav .closebtn:active {
   background-color: #c6c6c675;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 .link {
@@ -162,12 +168,12 @@
   font-size: 16px;
 }
 
-.links a{
+.links a {
   text-decoration: none;
 }
 
-.link:hover{
-  color: #f8ad14;
+.link:hover {
+  color: #212121;
 }
 
 .busca {
@@ -175,7 +181,7 @@
   display: flex;
   grid-area: busca;
   width: 100%;
-  @media(max-width:$tablet){
+  @media (max-width: $tablet) {
     height: 100%;
   }
 }
@@ -191,7 +197,7 @@
   grid-area: icones;
   margin-left: 30px;
 
-  @media(max-width:$mobile-sm){
+  @media (max-width: $mobile-sm) {
     margin: auto;
   }
 }

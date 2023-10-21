@@ -2,7 +2,7 @@ import styles from './Navbar.module.scss';
 import classNames from 'classnames';
 import { RiShoppingCart2Line, RiShoppingCartFill } from 'react-icons/ri';
 import Busca from '../Busca';
-import image from '../../assets/logo-geek.png';
+import image from '../../assets/logo-geek-white2.png';
 import { useEffect, useState } from 'react';
 
 const iconeProps = {
@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav className={styles.nav}>
       {isTabletView && (
         <div className={styles.hamburguer} onClick={handleHamburguerClick}>
-          &#9776;
+          <span className="text-white">&#9776;</span>
         </div>
       )}
       <ul
