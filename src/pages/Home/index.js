@@ -13,14 +13,29 @@ export default function Home() {
     <div>
       <Header className={styles.header} />
       <main>
-        <div>
-          <BaseCarousel items={categories} />
+        <div className="mb-5">
+          <BaseCarousel
+            indicators={false}
+            fade={true}
+            items={categories}
+            caption={true}
+          />
         </div>
         <div className={styles.categories}>
           <div className={styles['categories-title']}>
-            <h1>Categorias</h1>
+            <h2>Categorias</h2>
           </div>
-          <div className={styles['categories-container']}></div>
+          <div className={styles['categories-container']}>
+            {categories?.map((category, index) => (
+              <div
+                key={index}
+                onClick={() => navigate(`/categoria/${category.id}`)}
+              >
+                <img src={category.thumbnail} alt={category.name} />
+                <h2>{category.name}</h2>
+              </div>
+            ))}
+          </div>
           {console.log(categories)}
         </div>
       </main>
