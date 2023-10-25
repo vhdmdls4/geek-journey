@@ -7,7 +7,14 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 
-export default function BaseCarousel({ items, args, customizedImage, fade }) {
+export default function BaseCarousel({
+  items,
+  args,
+  customizedImage,
+  fade,
+  indicators,
+  caption,
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -28,25 +35,35 @@ export default function BaseCarousel({ items, args, customizedImage, fade }) {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
+  const slides = items.map((item, index) => {
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
-        className=""
       >
         <img
           src={item.src}
           alt={item.altText}
           className="d-flex mx-auto"
           width={650}
-          height={350}
+          style={{
+            maxWidth: '650px',
+            maxHeight: '390px',
+            width: 'auto',
+            height: 'auto',
+            objectFit: 'contain',
+            borderRadius: '.25rem',
+          }}
         />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        {caption && (
+          <CarouselCaption
+            className="text-white bg-black w-25 mx-auto pt-2 pb-2 rounded-1"
+            // captionText={item.description}
+            captionHeader={item.name}
+            style={{ maxWidth: '500px !important' }}
+          />
+        )}
       </CarouselItem>
     );
   });
@@ -65,16 +82,20 @@ export default function BaseCarousel({ items, args, customizedImage, fade }) {
         onClickHandler={goToIndex}
       />
       {slides}
-      <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={previous}
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={next}
-      />
+      {indicators && (
+        <>
+          <CarouselControl
+            direction="prev"
+            directionText="Previous"
+            onClickHandler={previous}
+          />
+          <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={next}
+          />
+        </>
+      )}
     </Carousel>
   );
 }
