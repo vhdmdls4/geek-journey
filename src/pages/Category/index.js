@@ -3,11 +3,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-function index() {
+function Categoria() {
   const categoryName = useParams();
-  // const category = useSelector((state) =>
-  //   state.categories.find((category) => category.id === categoryName)
-  // );
+  const category = useSelector((state) =>
+    state.categories.find((category) => category.id === categoryName)
+  );
   return (
     <div>
       <Header
@@ -19,4 +19,4 @@ function index() {
   );
 }
 
-export default index;
+export default Categoria;

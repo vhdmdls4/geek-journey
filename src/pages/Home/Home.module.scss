@@ -3,38 +3,37 @@
 }
 
 .categories {
+  margin-top: 5rem;
   align-items: center;
   display: flex;
   flex-direction: column;
   padding: 0 100px 0;
+
   h1 {
     color: white;
     font-size: 40px;
   }
+
+  h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
+
   &-container {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    top: calc(100% - 150px);
     width: 90%;
     > div {
-      align-items: center;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      h1 {
-        color: #041833;
-        font-size: 25px;
-      }
       > img {
-        border-radius: 144px;
+        width: 15rem;
+        height: 25rem;
+        object-fit: cover;
+        border-radius: 100px;
+        cursor: pointer;
       }
     }
-  }
-  &-thumbnail {
-    width: 500px;
-    height: 600px;
-    object-fit: cover;
   }
 }
