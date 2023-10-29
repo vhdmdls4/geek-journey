@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Item.module.scss';
 import { FaCartPlus, FaHeart, FaRegHeart } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeFavorite } from 'store/reducers/items';
+import { changeCart } from 'store/reducers/cart';
 
 const iconProps = {
   size: 24,
@@ -14,8 +15,16 @@ function Item(props) {
 
   const dispatch = useDispatch();
 
+  const existInCart = useSelector((state) =>
+    state.cart.some((itemInCart) => itemInCart.id === id)
+  );
+
   function handleFavorite() {
     dispatch(changeFavorite(id));
+  }
+
+  function handleCartChange() {
+    dispatch(changeCart(id));
   }
 
   return (
@@ -46,8 +55,9 @@ function Item(props) {
             )}
             <FaCartPlus
               {...iconProps}
-              color={false ? '#1875e2' : iconProps.color}
+              color={existInCart ? '#1875e2' : iconProps.color}
               className={styles['item-action']}
+              onClick={handleCartChange}
             />
           </div>
         </div>

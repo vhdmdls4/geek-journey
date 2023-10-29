@@ -130,12 +130,12 @@ const initialState = [
   {
     title: 'Console',
     description:
-      'O console que está em pré-venda oferece novas possibilidades de jogabilidade que você nunca imaginou. Além disso, você também pode baixar jogos_tabuleiro digitais, Experimente o carregamento extremamente rápido do SSD de 825GB com ultra-velocidade, uma imersão mais profunda com suporte à resposta tátil, gatilhos adaptáveis e áudio 3D.',
+      'O console que está em pré-venda oferece novas possibilidades de jogabilidade que você nunca imaginou. Além disso, você também pode baixar games digitais, Experimente o carregamento extremamente rápido do SSD de 825GB com ultra-velocidade, uma imersão mais profunda com suporte à resposta tátil, gatilhos adaptáveis e áudio 3D.',
     image: console1,
     favorite: false,
     price: 4300,
     id: uuid(),
-    category: 'jogos_tabuleiro',
+    category: 'games',
   },
   {
     title: 'Jogo para console',
@@ -145,7 +145,7 @@ const initialState = [
     favorite: false,
     price: 299.9,
     id: uuid(),
-    category: 'jogos_tabuleiro',
+    category: 'games',
   },
   {
     title: 'Console',
@@ -155,7 +155,7 @@ const initialState = [
     favorite: false,
     price: 4349,
     id: uuid(),
-    category: 'jogos_tabuleiro',
+    category: 'games',
   },
   {
     title: 'Controle joystick sem fio',
@@ -165,7 +165,7 @@ const initialState = [
     favorite: false,
     price: 279,
     id: uuid(),
-    category: 'jogos_tabuleiro',
+    category: 'games',
   },
   {
     title: 'Jogo para console',
@@ -175,7 +175,7 @@ const initialState = [
     favorite: false,
     price: 349.9,
     id: uuid(),
-    category: 'jogos_tabuleiro',
+    category: 'games',
   },
   {
     title: 'Organizador de Mesa',
@@ -242,7 +242,7 @@ const itemsSlice = createSlice({
   },
 });
 
-const items = (state) => state.items;
+export const items = (state) => state.items;
 
 export const itemsFilteredSelector = createSelector(
   [items, (items, categoryName) => categoryName],
