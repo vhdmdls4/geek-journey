@@ -26,14 +26,15 @@ const initialState = [
     src: actionFigure,
   },
   {
-    name: 'Jogos de Tabuleiro',
+    name: 'Games',
     thumbnail:
-      'https://upload.wikimedia.org/wikipedia/commons/8/8c/Amsterdam_-_Risk_players_-_1136_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     header:
-      'https://upload.wikimedia.org/wikipedia/commons/8/8c/Amsterdam_-_Risk_players_-_1136_%28cropped%29.jpg',
-    id: 'jogos_tabuleiro',
-    description: 'Diversão garantida com os melhores jogos de tabuleiro.',
-    src: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Amsterdam_-_Risk_players_-_1136_%28cropped%29.jpg',
+      'https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    id: 'games',
+    description:
+      'Diversão garantida com os melhores jogos, console e acessórios para vídeo-games.',
+    src: 'https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     name: 'Camisetas Geek',
