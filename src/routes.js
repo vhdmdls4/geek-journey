@@ -1,7 +1,7 @@
 import PaginaPadrao from 'components/PaginaPadrao';
+import CategoryPage from 'pages/Category';
 import Home from 'pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Categories from 'store/reducers/categories';
 
 export default function Router() {
   return (
@@ -9,7 +9,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<PaginaPadrao />}>
           <Route index element={<Home />} />
-          <Route path="/categoria/:categoryName" element={<Categories />} />
+          <Route path="/categoria/:categoryName" element={<CategoryPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
