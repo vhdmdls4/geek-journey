@@ -75,6 +75,7 @@ export default function BaseCarousel({
       previous={previous}
       {...args}
       fade={fade}
+      style={{ zIndex: '0' }}
     >
       <CarouselIndicators
         items={items}
