@@ -13,8 +13,6 @@ function CategoryPage() {
     return itemsFilteredSelector(state, categoryName);
   });
 
-  console.log(items);
-
   return (
     <div>
       <Header />
