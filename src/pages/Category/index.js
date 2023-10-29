@@ -2,21 +2,31 @@ import Header from 'components/Header';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import style from './Category.module.scss';
+import Item from 'components/Item';
+import { itemsFilteredSelector } from 'store/reducers/items';
 
-function Categoria() {
-  const categoryName = useParams();
-  const category = useSelector((state) =>
-    state.categories.find((category) => category.id === categoryName)
-  );
+function CategoryPage() {
+  const { categoryName } = useParams();
+
+  const items = useSelector((state) => {
+    return itemsFilteredSelector(state, categoryName);
+  });
+
+  console.log(items);
+
   return (
     <div>
-      <Header
-        title={category.name ? category.name : ''}
-        description={category.description ? category.description : ''}
-        image={category.header ? category.header : ''}
-      />
+      <Header />
+      <div className={style.items}>
+        {items?.map((item, index) => (
+          <Item key={index} {...item}>
+            {item.title}
+          </Item>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default Categoria;
+export default CategoryPage;
