@@ -4,6 +4,7 @@ import { RiShoppingCart2Line, RiShoppingCartFill } from 'react-icons/ri';
 import Busca from '../Busca';
 import image from '../../assets/logo-geek-white2.png';
 import { useEffect, useState } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const iconeProps = {
   color: 'white',
@@ -11,6 +12,8 @@ const iconeProps = {
 };
 
 export default function Navbar() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isTabletView, setisTabletView] = useState(window.innerWidth < 1024);
   const [clicked, setClicked] = useState(false);
 
@@ -54,48 +57,48 @@ export default function Navbar() {
           </a>
         )}
         <li>
-          <a
-            href="/"
+          <NavLink
+            to="/"
             className={classNames(styles.link, {
-              [styles.selected]: window.location.pathname === '/',
+              [styles.selected]: location.pathname === '/',
             })}
           >
             PÁGINA INICIAL
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a
-            href="/"
+          <NavLink
+            to="/"
             className={classNames(styles.link, {
-              [styles.selected]: window.location.pathname === '/',
-            })}
-          >
-            PRODUTOS
-          </a>
-        </li>
-        <li>
-          <a
-            href="/"
-            className={classNames(styles.link, {
-              [styles.selected]: window.location.pathname === '/',
+              [styles.selected]: location.pathname.includes('/sobre'),
             })}
           >
             SOBRE
-          </a>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/parceiros-geek"
+            className={classNames(styles.link, {
+              [styles.selected]: location.pathname.includes('/parceiros-geek'),
+            })}
+          >
+            PARCEIROS GEEK
+          </NavLink>
         </li>
       </ul>
-      <img src={image} className={styles.logo} />
+      <img src={image} className={styles.logo} onClick={() => navigate('/')} />
       <div className={styles.busca}>
         <Busca />
       </div>
       <div className={styles.icones}>
-        <a href="/carrinho">
+        <NavLink to="/carrinho">
           {window.location.pathname === '/carrinho' ? (
             <RiShoppingCartFill {...iconeProps} />
           ) : (
             <RiShoppingCart2Line {...iconeProps} />
           )}
-        </a>
+        </NavLink>
       </div>
     </nav>
   );
