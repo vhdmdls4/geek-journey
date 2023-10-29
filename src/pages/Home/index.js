@@ -7,7 +7,6 @@ import BaseCarousel from 'components/common/BaseCarousel';
 export default function Home() {
   const navigate = useNavigate();
   const categories = useSelector((state) => state.categories);
-  console.log(categories);
 
   return (
     <div>
@@ -36,7 +35,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {console.log(categories)}
         </div>
       </main>
     </div>
