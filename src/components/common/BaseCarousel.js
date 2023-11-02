@@ -58,10 +58,10 @@ export default function BaseCarousel({
         />
         {caption && (
           <CarouselCaption
-            className="text-white bg-black w-25 mx-auto pt-2 pb-2 rounded-1"
+            className="text-muted bg-light w-25 mx-auto pt-2 pb-2 rounded-1"
             // captionText={item.description}
             captionHeader={item.name}
-            style={{ maxWidth: '500px !important' }}
+            style={{ maxWidth: '10rem !important' }}
           />
         )}
       </CarouselItem>
@@ -76,6 +76,7 @@ export default function BaseCarousel({
       {...args}
       fade={fade}
       style={{ zIndex: '0' }}
+      dark
     >
       <CarouselIndicators
         items={items}
