@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@hint/configuration-web-recommended": "^8.2.23",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -13,6 +14,7 @@
     "classnames": "^2.3.1",
     "eslint-plugin-prettier": "^5.0.0",
     "gh-pages": "^6.0.0",
+    "hint": "^7.1.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
