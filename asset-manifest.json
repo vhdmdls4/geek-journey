@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/geek-journey/static/css/main.ae246b25.css",
+    "main.js": "/geek-journey/static/js/main.f9dce127.js",
+    "static/media/shirts-image.png": "/geek-journey/static/media/shirts-image.f2a15dcf8c04930137b3.png",
+    "static/media/onepiece-action-figures.jpg": "/geek-journey/static/media/onepiece-action-figures.7ec266f777b32e368f57.jpg",
+    "static/media/tv-50.png": "/geek-journey/static/media/tv-50.703e8d8c3b6fb1c313ba.png",
+    "static/media/console-1.png": "/geek-journey/static/media/console-1.dd1a0e330126143bd2ae.png",
+    "static/media/tv-60.png": "/geek-journey/static/media/tv-60.aa48a86a1eddc4da7ab7.png",
+    "static/media/assento.png": "/geek-journey/static/media/assento.eb4358a4473226e19716.png",
+    "static/media/tablet.png": "/geek-journey/static/media/tablet.9a630e5c39077d7aadb1.png",
+    "static/media/organizador-lateral.png": "/geek-journey/static/media/organizador-lateral.d3da72a4d633d87a4e84.png",
+    "static/media/mini-system.png": "/geek-journey/static/media/mini-system.4dffe6aeaea09028f77a.png",
+    "static/media/capa-volante-couro.png": "/geek-journey/static/media/capa-volante-couro.2c2072399fbf86fe07f3.png",
+    "static/media/jogo-1.png": "/geek-journey/static/media/jogo-1.89219a48b7076bd7c70e.png",
+    "static/media/caixa-som-bluetooth.png": "/geek-journey/static/media/caixa-som-bluetooth.6f553fb086f005434161.png",
+    "static/media/capa-volante-cristais.png": "/geek-journey/static/media/capa-volante-cristais.c1c345a57c039a70e5f6.png",
+    "static/media/organizador-pastas.png": "/geek-journey/static/media/organizador-pastas.e849fae31fd525cd3177.png",
+    "static/media/jogo-2.png": "/geek-journey/static/media/jogo-2.7564c28c12f7a4b8bafc.png",
+    "static/media/guarda-treco.png": "/geek-journey/static/media/guarda-treco.ef2846de22630d00964a.png",
+    "static/media/papel.png": "/geek-journey/static/media/papel.700a84257a5dc32d12ce.png",
+    "static/media/caderno.png": "/geek-journey/static/media/caderno.1b14a777201d06b98086.png",
+    "static/media/logo-geek-white2.png": "/geek-journey/static/media/logo-geek-white2.96935cb9916a26f645b2.png",
+    "static/media/assistente-virtual-tela.png": "/geek-journey/static/media/assistente-virtual-tela.49b6a3e0039aa5f1e44a.png",
+    "static/media/manete.png": "/geek-journey/static/media/manete.ee1ea5b465fc5fac7c99.png",
+    "static/media/caixa-som.png": "/geek-journey/static/media/caixa-som.9ac7e44fea504b9255cc.png",
+    "static/media/suporte-veicular.png": "/geek-journey/static/media/suporte-veicular.27e55f71ff141bcdc9ae.png",
+    "static/media/console-2.png": "/geek-journey/static/media/console-2.8f02dfa250148284fbbe.png",
+    "static/media/leitor-livros.png": "/geek-journey/static/media/leitor-livros.bceb350dddb9a15ea003.png",
+    "static/media/cadeira.png": "/geek-journey/static/media/cadeira.a98db50a1a39ffcf9b21.png",
+    "static/media/airpod.png": "/geek-journey/static/media/airpod.d81a4a2e2834d11535e9.png",
+    "static/media/assistente-virtual.png": "/geek-journey/static/media/assistente-virtual.4c1a3108518117ba6723.png",
+    "static/media/empty-cart.png": "/geek-journey/static/media/empty-cart.d988adffee4e652c0d94.png",
+    "index.html": "/geek-journey/index.html",
+    "main.ae246b25.css.map": "/geek-journey/static/css/main.ae246b25.css.map",
+    "main.f9dce127.js.map": "/geek-journey/static/js/main.f9dce127.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae246b25.css",
+    "static/js/main.f9dce127.js"
+  ]
+}
