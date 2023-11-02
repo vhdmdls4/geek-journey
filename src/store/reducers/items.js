@@ -242,12 +242,29 @@ const itemsSlice = createSlice({
   },
 });
 
-export const items = (state) => state.items;
+const items = (state) => state.items;
+
+const search = (state) => state.search;
 
 export const itemsFilteredSelector = createSelector(
-  [items, (items, categoryName) => categoryName],
-  (items, categoryName) =>
-    items.filter((item) => item.category === categoryName)
+  [items, search, (_, categoryName) => categoryName],
+  (items, search, categoryName) => {
+    const words = search.split(' ');
+
+    const itemsFiltered = items.filter((item) => {
+      return (
+        item.category === categoryName &&
+        words.every((word) => {
+          const regexp = new RegExp([...word].join('.*'), 'i');
+          return item.title.match(regexp);
+        })
+      );
+    });
+
+    //regex mais abrangente para o usuário poder errar
+
+    return itemsFiltered;
+  }
 );
 
 export const { changeFavorite } = itemsSlice.actions;
